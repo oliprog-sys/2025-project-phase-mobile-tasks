@@ -30,28 +30,49 @@ class AddProduct extends StatelessWidget {
             Center(child: AddImage()),
             SizedBox(height: 20),
             Padding(
-              padding: const EdgeInsets.only(left: 50),
+              padding: const EdgeInsets.only(left: 20),
               child: Text('name', style: TextStyle(fontSize: 14)),
             ),
             SizedBox(height: 8),
             InputField(),
             SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.only(left: 50.0),
+              padding: const EdgeInsets.only(left: 20.0),
               child: Text('Category', style: TextStyle(fontSize: 14)),
             ),
             SizedBox(height: 8),
             InputField(),
             SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.only(left: 50.0),
+              padding: const EdgeInsets.only(left: 20.0),
               child: Text('price', style: TextStyle(fontSize: 14)),
             ),
             SizedBox(height: 8),
-            InputField(),
+            Center(
+              child: Container(
+                width: 366,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 14),                  
+                    suffixText: '\$',  
+                    suffixStyle: TextStyle(
+                      color: Colors.black54,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+            ),
             SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.only(left: 50.0),
+              padding: const EdgeInsets.only(left: 20.0),
               child: Text('description', style: TextStyle(fontSize: 14)),
             ),
             Center(
@@ -62,8 +83,16 @@ class AddProduct extends StatelessWidget {
                   color: Colors.grey[300],
                   borderRadius: BorderRadius.circular(6),
                 ),
+                child: TextField(
+                  maxLines: null,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.all(12),                   
+                  ),
+                ),
               ),
             ),
+
             SizedBox(height: 20,),
             Center(
               child: ElevatedButton(
@@ -102,7 +131,8 @@ class AddProduct extends StatelessWidget {
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Colors.red)
                 )
               ),
-            )
+            ),
+            SizedBox(height: 10,),
           ],
         ),
       ),
@@ -157,9 +187,17 @@ class InputField extends StatelessWidget {
         height: 50,
         decoration: BoxDecoration(
           color: Colors.grey[300],
-          borderRadius: BorderRadius.circular(6.0),
+          borderRadius: BorderRadius.circular(6),
+        ),
+        child: TextField(
+          maxLines: null, // allows multiple lines (useful for taller box)
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            contentPadding: EdgeInsets.all(12),            
+          ),
         ),
       ),
     );
+
   }
 }
