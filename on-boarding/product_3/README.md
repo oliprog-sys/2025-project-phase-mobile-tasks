@@ -22,7 +22,7 @@
   - has update and delete feature of a specific product
 ## How to run the App
   ### clone the repository
-    - git clone [GitHub Repository]([https://github.com/o](https://github.com/oliprog-sys/2025-project-phase-mobile-tasks/tree/main/on-boarding/product_3))
+    - git clone [GitHub Repository](https://github.com/oliprog-sys/2025-project-phase-mobile-tasks/tree/main/on-boarding/product_3)
     - cd product_3
   ### Install dependencies
       - flutter pub get
